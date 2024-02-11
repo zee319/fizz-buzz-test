@@ -25,33 +25,38 @@ namespace FizzBuzz.Tests
             string result = fizzBuzzLogicService.GetFizzBuzz(number);
 
             // Assert
-            Assert.Equals("Fizz", result);
+            Assert.That("Fizz" == result);
         }
 
         [Test]
         public void WhenDivisibleByFiveShouldReturnBuzz()
         {
-            // Arrange
             int number = 10; 
 
-            // Act
             string result = fizzBuzzLogicService.GetFizzBuzz(number);
 
-            // Assert
-            Assert.Equals("Buzz", result);
+            Assert.That("Buzz" == result);
         }
 
         [Test]
         public void WhenDivisibleByFiveAndThreeShouldReturnFizzBuzz()
         {
-            // Arrange
+           
             int number = 15; 
-
-            // Act
+          
             string result = fizzBuzzLogicService.GetFizzBuzz(number);
 
-            // Assert
-            Assert.Equals("FizzBuzz", result);
+            Assert.That("FizzBuzz" == result);
+        }
+
+        [Test]
+        public void WhenNumberIsNotDivisibleByFiveOrThreeShouldReturnNumber()
+        {
+            int number = 11;
+
+            string result = fizzBuzzLogicService.GetFizzBuzz(number);
+
+            Assert.That("11" == result);
         }
     }
 }
