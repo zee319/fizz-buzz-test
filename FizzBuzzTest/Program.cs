@@ -24,19 +24,20 @@ namespace FizzBuzzTest
 
         static string GetFizzBuzz(int n)
         {
-            string result = n.ToString(); 
-            if (n % 3 == 0 && n % 5 == 0)
-            {
-                result =  "FizzBuzz";
-            }
+            string result = n.ToString();
             if (n % 3 == 0)
             {
                 result = "Fizz";
             }
             if (n % 5 == 0)
             {
-                result =  "Buzz";
+                result = "Buzz";
             }
+            if (n % 3 == 0 && n % 5 == 0)
+            {
+                result =  "FizzBuzz";
+            }
+           
             return result;    
         }
     }

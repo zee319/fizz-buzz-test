@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace FizzBuzz.Tests
 {
     [TestFixture]
-    public class FizzBuzzServiceTests
+    public class FizzBuzzTests
     {
       
         [SetUp]
