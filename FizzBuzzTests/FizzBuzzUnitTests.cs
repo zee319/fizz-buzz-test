@@ -19,10 +19,10 @@ namespace FizzBuzz.Tests
         public void WhenDivisibleByThreeShouldReturnFizz()
         {
             //Arrange
-            int number = 6; 
+            int testNumber = 6; 
 
             // Act
-            string result = fizzBuzzLogicService.GetFizzBuzz(number);
+            string result = fizzBuzzLogicService.GetFizzBuzz(testNumber);
 
             // Assert
             Assert.That("Fizz" == result);
@@ -31,9 +31,9 @@ namespace FizzBuzz.Tests
         [Test]
         public void WhenDivisibleByFiveShouldReturnBuzz()
         {
-            int number = 10; 
+            int testNumber = 10; 
 
-            string result = fizzBuzzLogicService.GetFizzBuzz(number);
+            string result = fizzBuzzLogicService.GetFizzBuzz(testNumber);
 
             Assert.That("Buzz" == result);
         }
@@ -42,9 +42,9 @@ namespace FizzBuzz.Tests
         public void WhenDivisibleByFiveAndThreeShouldReturnFizzBuzz()
         {
            
-            int number = 15; 
+            int testNumber = 15; 
           
-            string result = fizzBuzzLogicService.GetFizzBuzz(number);
+            string result = fizzBuzzLogicService.GetFizzBuzz(testNumber);
 
             Assert.That("FizzBuzz" == result);
         }
@@ -52,9 +52,9 @@ namespace FizzBuzz.Tests
         [Test]
         public void WhenNumberIsNotDivisibleByFiveOrThreeShouldReturnNumber()
         {
-            int number = 11;
+            int testNumber = 11;
 
-            string result = fizzBuzzLogicService.GetFizzBuzz(number);
+            string result = fizzBuzzLogicService.GetFizzBuzz(testNumber);
 
             Assert.That("11" == result);
         }

@@ -11,9 +11,9 @@ namespace FizzBuzzTest
         static void Main(string[] args)
         {
             Console.WriteLine("Printing FizzBuzz Results");
-            
-            var fizzBuzzService = new FizzBuzzLogicService();
-            var fizzBuzzPrinter = new FizzBuzzOutputService(fizzBuzzService);
+
+            FizzBuzzLogicService fizzBuzzService = new FizzBuzzLogicService();
+            FizzBuzzOutputService fizzBuzzPrinter = new FizzBuzzOutputService(fizzBuzzService);
 
             fizzBuzzPrinter.OutputFizzBuzz(1, 100);
 
