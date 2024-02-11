@@ -13,16 +13,16 @@ namespace FizzBuzzTest
             //Printing FizzBuzz Result
             Console.WriteLine();
 
-            for (int i = 1; i <= 100; i++)
-            {
-                string result = GetFizzBuzz(i);
-                Console.WriteLine(result);
-            }
+            
+            var fizzBuzzService = new FizzBuzzLogicService();
+            var fizzBuzzPrinter = new FizzBuzzOutputService(fizzBuzzService);
+
+            fizzBuzzPrinter.OutputFizzBuzz(1, 100);
 
             Console.ReadLine();
         }
 
-        static string GetFizzBuzz(int n)
+       /* static string GetFizzBuzz(int n)
         {
             string result = n.ToString();
             if (n % 3 == 0)
@@ -39,6 +39,6 @@ namespace FizzBuzzTest
             }
            
             return result;    
-        }
+        }*/
     }
 }
