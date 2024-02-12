@@ -1,4 +1,5 @@
 ﻿using System;
+using FizzBuzzTest;
 using NUnit.Framework;
 
 namespace FizzBuzz.Tests
@@ -6,39 +7,56 @@ namespace FizzBuzz.Tests
     [TestFixture]
     public class FizzBuzzTests
     {
-      
+        private FizzBuzzLogicService fizzBuzzLogicService;
+
         [SetUp]
         public void Setup()
         {
+            fizzBuzzLogicService = new FizzBuzzLogicService();
         }
 
         [Test]
         public void WhenDivisibleByThreeShouldReturnFizz()
         {
-            // Arrange
+            //Arrange
+            int testNumber = 6; 
+
             // Act
+            string result = fizzBuzzLogicService.GetFizzBuzz(testNumber);
+
             // Assert
-            Assert.Equals("Fizz", null);
+            Assert.That("Fizz" == result);
         }
 
         [Test]
         public void WhenDivisibleByFiveShouldReturnBuzz()
         {
-            // Arrange
-            // Act
-            // Assert
-            Assert.Equals("Buzz", null);
+            int testNumber = 10; 
+
+            string result = fizzBuzzLogicService.GetFizzBuzz(testNumber);
+
+            Assert.That("Buzz" == result);
         }
 
         [Test]
         public void WhenDivisibleByFiveAndThreeShouldReturnFizzBuzz()
         {
-            // Arrange
+           
+            int testNumber = 15; 
+          
+            string result = fizzBuzzLogicService.GetFizzBuzz(testNumber);
 
-            // Act
+            Assert.That("FizzBuzz" == result);
+        }
 
-            // Assert
-            Assert.Equals("FizzBuzz", null);
+        [Test]
+        public void WhenNumberIsNotDivisibleByFiveOrThreeShouldReturnNumber()
+        {
+            int testNumber = 11;
+
+            string result = fizzBuzzLogicService.GetFizzBuzz(testNumber);
+
+            Assert.That("11" == result);
         }
     }
 }
